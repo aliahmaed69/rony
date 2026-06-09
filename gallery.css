@@ -182,3 +182,25 @@ transition:1s;
 opacity:1;
 transform:translateY(0);
 }
+.gallery-img:hover:not(.fullscreen){
+    transform:scale(1.05);
+}.gallery-img{
+    width:100%;
+    max-width:300px;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.gallery-img.fullscreen{
+    position:fixed !important;
+    top:50% !important;
+    left:50% !important;
+    width:90vw !important;
+    max-width:800px !important;
+    max-height:90vh !important;
+    height:auto !important;
+    object-fit:contain !important;
+    transform:translate(-50%, -50%) !important;
+    z-index:99999 !important;
+    margin:0 !important;
+}

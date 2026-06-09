@@ -1,20 +1,35 @@
-const images = document.querySelectorAll(".gallery img");
-const viewer = document.getElementById("viewer");
-const viewerImg = document.getElementById("viewerImg");
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("playBtn");
+const progress = document.getElementById("progress");
 
-images.forEach(img=>{
+if(audio && playBtn){
 
-img.onclick=()=>{
+    playBtn.onclick = () => {
+        if(audio.paused){
+            audio.play();
+            playBtn.textContent = "❚❚";
+        }else{
+            audio.pause();
+            playBtn.textContent = "▶";
+        }
+    };
 
-viewer.style.display="flex";
-viewerImg.src=img.src;
+    if(progress){
+        audio.addEventListener("timeupdate", () => {
+            progress.value = (audio.currentTime / audio.duration) * 100 || 0;
+        });
 
-};
+        progress.addEventListener("input", () => {
+            audio.currentTime = (progress.value / 100) * audio.duration;
+        });
+    }
+}
+document.querySelectorAll(".gallery-img").forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        img.classList.toggle("fullscreen");
+
+    });
 
 });
-
-viewer.onclick=()=>{
-
-viewer.style.display="none";
-
-};
