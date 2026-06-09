@@ -3,125 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>رنو 💜</title>
+<title>رنوي 💜</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="bg"></div>
 <div class="overlay"></div>
 
-<section class="hero">
+<div class="container">
 
-    <div class="hero-content">
+<h1>رنوي 💜</h1>
 
-        <h1>Rony💜</h1>
+<p>
+اختر القسم الذي تريد دخوله
+</p>
 
-        <p>
-            هذا المكان صُنع خصيصًا لكِ
-        </p>
+<div class="buttons">
 
-        <a href="#daily" class="scroll-btn">
-            انزلي للأسفل ↓
-        </a>
+<a href="rony.html" class="btn">
+💌 رسائل رنوي
+</a>
 
-    </div>
-
-</section>
-
-<section id="daily" class="daily-section">
-
-    <h2>💌 رسائل رنوي اليومية</h2>
-
-    <div class="counter">
-
-        <span id="dayCounter">
-            اليوم 1 من 10
-        </span>
-
-        <span id="availableCounter"></span>
-
-    </div>
-
-    <div class="progress-container">
-        <div id="progressBar"></div>
-    </div>
-
-    <div id="scratchCards" class="scratch-grid"></div>
-
-</section>
-
-<section class="messages">
-
-    <div class="box reveal">
-        ✨ أنتِ شخص مميز أكثر مما تتخيلين.
-    </div>
-
-    <div class="box reveal">
-        🌸 وجودك يصنع فرقاً جميلاً.
-    </div>
-
-    <div class="box reveal">
-        💜 لا تنسي أبداً قيمتك.
-    </div>
-
-    <div class="box reveal">
-        ⭐ المستقبل يحمل لك أشياء جميلة.
-    </div>
-
-</section>
-
-<section class="letter">
-
-    <div class="letter-card reveal">
-
-        <h2>إلى رنو 💜</h2>
-
-        <p>
-            مهما كانت الأيام صعبة،
-            تذكري أنك قوية وقادرة على تجاوزها.
-
-            أنتِ شخص رائع،
-            وتستحقين السعادة والراحة والنجاح.
-
-            حافظي على ابتسامتك الجميلة دائماً 💖
-        </p>
-
-    </div>
-
-</section>
-
-<section class="end-section">
-
-    <h2 class="reveal">
-        💫 أجمل الأيام ما زالت قادمة
-    </h2>
-
-</section>
-
+<a href="gallery.html" class="btn">
+📸 صور رنوي
+</a>
 <div class="music-player">
 
     <img src="images/cover.jpg" alt="cover">
 
     <div class="music-info">
-
-        <h3>My Favorite Song</h3>
-
+        <h3>You're So Vain</h3>
         <input type="range" id="progress" value="0">
-
     </div>
 
     <button id="playBtn">▶</button>
 
 </div>
 
-<audio id="audio" autoplay loop>
-    <source src="music/song.mp3" type="audio/mpeg">
+<audio id="audio" loop>
+    <source src="music/You're So Vain.mp3" type="audio/mpeg">
 </audio>
+</div>
 
-<script src="script.js"></script>
-<button class="reset-btn" onclick="askReset()">🔄 Reset</button>
+</div>
+<script src="music.js"></script>
 </body>
 </html>
